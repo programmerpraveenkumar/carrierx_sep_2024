@@ -1,0 +1,58 @@
+<!-- firstname = asdfasdf -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- javascript should come in the script tag -->
+    <script>
+        // var let const
+        var firstname = 'shiva';
+        firstname = 'shiva23424';//update
+        var firstname = 'krishna';//re-declaration.
+        document.write(firstname);//will write the variable into the html 
+
+        //const variable canot be update
+        const country = 'india';
+        //country = 'usa';//error during update
+        document.write(country);//will write the variable into the html 
+
+        let mobile = '646464';
+        mobile = '45645645';
+        //let mobile = '64643464';//error
+        document.write(mobile);//will write the variable into the html 
+        //funcions`
+
+        function add(a,b){
+            return a+b;
+        }
+        let res = add(47,45);
+        console.log(res)
+
+        //arrow function
+        add1=(a,b)=>{
+            let res = a+b;
+            console.log(res)
+            return res;
+        }
+
+        let res1 = add1(7,45);
+        console.log(res1);
+
+        printName=()=>{
+            //read the value from the input 
+            let val = document.getElementById("input1").value;
+            console.log(val);
+            
+        }
+
+    </script>
+ </head>
+ <body>
+    <input type="text" placeholder="Enter Name" id="input1">
+    <input onclick="printName()" type="button" value="print the name">
+
+    <input onclick="add1(12,35)" type="button" value="Add">
+ </body>
+ </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function loginValidate(){
+        let email_val = document.getElementById("email_id").value;
+        let pwd_val = document.getElementById("pwd_id").value;
+        if(email_val==""){
+            alert("email shud not be empty!!")
+        }else if(pwd_val== ""){
+            alert("pwd shud not be empty!!")
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="email_id" placeholder="Enter Email"/>
+    <input type="text" id="pwd_id" placehoclder="Enter pwd"/>
+    <input type="text" id="mobile" placehoclder="Enter Mobile"/>
+    <input type="button" value="Click" onclick="loginValidate()"/>
+    
+
+</body>
+</html>
