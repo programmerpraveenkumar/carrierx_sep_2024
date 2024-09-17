@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var firstname = "sdfdfadfa";
+        console.log(firstname.length);//to know the length
+        console.log(firstname.indexOf("s"));//count starts from 0
+        console.log(firstname.startsWith("sdf"));
+
+        var email = ' some@smpel.com ';
+        console.log(email.trim());//remove the space before and after
+        console.log(email.toUpperCase());
+        var email2 = email.split('@');
+        console.log(email2);
+
+
+        //array methods
+        var nameAr = ["adfad","24542","5465468"];        
+        nameAr.push("sfgf");
+        console.log(nameAr);
+        nameAr.splice(nameAr.indexOf("24542"),1);
+        //removes the first element to the array
+        console.log(nameAr.indexOf("adfadsf"));
+        nameAr.shift("sdfd");
+        console.log(nameAr);
+
+        //removes the last element from the array
+        nameAr.pop();
+        console.log(nameAr);
+        nameList = ['Hector Pulliam',
+'Edith Davison',
+"Gary Pike",
+'Marissa Burk',
+'Enoch Hutton',
+'Donavon Tabor',
+'Aditya Contreras',
+'Annalisa Akins',
+'James Masterson',
+'Mauro Barbee'];
+
+let filterList = nameList.filter((obj)=>obj.startsWith("A"));
+console.log(filterList);
+
+let newList = nameList.map((obj)=>"Mr."+obj);
+console.log(newList);
+
+
+let fil1 = nameList.filter((obj)=>obj.startsWith("A")).map((obj)=>"Mr."+obj);
+console.log(fil1);
+
+
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

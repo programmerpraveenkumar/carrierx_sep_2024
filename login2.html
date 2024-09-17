@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Validate{
+            login(){
+                let email = document.getElementById("email").value;
+                let pwd = document.getElementById("pwd").value;
+                if(email == ''){
+                    alert("email is empty!!!")
+                }else if(pwd == ''){
+                    alert("pwd is empty!!!")
+                }else{
+                    alert("everything is fine");
+                }
+            }       
+        }
+        //need to create object for the class in order to call the methods of the class
+        let v = new Validate();
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="email" placeholder="Enter Email"/>
+    </div>
+    <div>
+        <input type="text" id="pwd" placeholder="Enter Password"/>
+    </div>
+    <div>
+        <input type="button" value="Login" onclick="v.login()"/>
+    </div>
+   
+    <div>
+     <h1 id="h1_id"></h1>
+    </div>
+
+    
+</body>
+</html>

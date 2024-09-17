@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sendMessage(){
+            let msgVal = document.getElementById("text").value;
+            let nameVal = document.getElementById("name").value;
+            //creating the div using javascript
+            let div = document.createElement("div");
+            div.append(nameVal+":"+msgVal);
+
+            //appending the div element into html
+            document.getElementById("messages").appendChild (div);
+            document.getElementById("text").value = "";//remove the existing value from textarea
+        }
+    </script>
+</head>
+<body>
+
+    <div id="messages">
+
+    </div>
+    <input type="text" id="name" placeholder="Enter Name">
+    <textarea name="" id="text"></textarea>
+    <!-- <button onclick="sendMessage()">Send</button> -->
+    <button id="snd_btn">Send</button>
+</body>
+<script>
+    ///another click variation
+    document.getElementById("snd_btn").addEventListener("click",()=>{
+        sendMessage();
+    })
+</script>
+</html>
