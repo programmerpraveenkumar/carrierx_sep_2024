@@ -1,0 +1,29 @@
+.parent{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.parent div{
+    width: 20%;            
+}
+/* below css will apply only when mouse is :hover */
+.google_link:hover{
+    background-color: red;
+    color: #fff;
+    padding: 10px;;
+}
+.input{
+    border: 1px solid red;
+    background-color: aqua;
+}
+.input:focus-visible{
+    border: 1px solid red;
+    outline-color: rgb(255, 42, 0);
+}
+p{
+    color: rgb(136, 255, 0);
+}
+/* below css will apply oly for immediate children */
+.div_1 > p{
+    color: blue;
+    background-color: rgb(0, 0, 0);
+}

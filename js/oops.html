@@ -7,13 +7,12 @@
     <script>
         class Sample{
            //it will be called during object creaton of the class
-            constructor(){
-                console.log("sample constructor..");
+            constructor(a,b){
+                console.log("sample constructor..",a,b);
             }
 
             login(){
                 console.log("ths is sample!!");
-                
             } 
          add(){
             let num1 = document.getElementById("num1").value;
@@ -29,7 +28,7 @@
          }  
         }
         //need to create object for the class in order to call the methods of the class
-        let s = new Sample();
+        let s = new Sample(5,8);
         // s.login();
     </script>
 </head>
