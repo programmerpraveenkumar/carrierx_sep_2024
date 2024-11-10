@@ -6,6 +6,7 @@ import { Contact } from './Contact';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const  routerConfig = createBrowserRouter([
+  {"path":"",element:<Home/>},
   {"path":"/home",element:<Home/>},
   {"path":"/about",element:<About/>},
   {"path":"/contact",element:<Contact/>}

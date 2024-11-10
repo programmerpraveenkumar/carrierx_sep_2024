@@ -3,7 +3,7 @@ import { Header } from "./Header";
 export function About(){
     return (
          <>
-        <Header/>
+        <Header currentPage="about"/>
         <h1>About Component</h1>
         </>
     )

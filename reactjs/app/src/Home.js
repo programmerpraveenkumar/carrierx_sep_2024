@@ -10,7 +10,7 @@ export function Home(){
     }
     return (
         <>
-            <Header/>
+            <Header currentPage="home"/>
             <h1>Home component</h1>
 
             {(status)?<h2>sample title</h2>:null}
