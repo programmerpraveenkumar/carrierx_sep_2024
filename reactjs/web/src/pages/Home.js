@@ -1,9 +1,26 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Header } from "./Header";
 
 export default function Home() {
+  let selector = useSelector((state)=>state.myreducer)//read the value from the store
+  let selector1 = useSelector((state)=>state.countryreducer)//read the value from the store
+  
+  let dispatach = useDispatch();
+  const add=()=>{
+      dispatach({type:"add"})//passing the action as type
+      dispatach({type:"USA"})//passing the action as type
+  }
+
+  const sub=()=>{
+    dispatach({type:"sub"})//passing the action as type
+  }
     return(
         <>
          <Header/>
+  {/* <h1>{selector}</h1>
+  <h1>name is {selector1}</h1>
+  <button onClick={add}>Add</button>
+  <button onClick={sub}>Sub</button> */}
 
   <section class="slider_section position-relative">
     <div id="customCarousel1" class="carousel slide" data-ride="carousel">

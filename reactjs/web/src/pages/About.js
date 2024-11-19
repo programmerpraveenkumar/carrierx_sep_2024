@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Header } from "./Header";
 
 /*
@@ -5,10 +6,16 @@ create About.js and copy the content from about.html to about.js
 add the router link in app.js
 */
 export default function About() {
+  let selector = useSelector((state)=>state.myreducer)//read the value from the store
+  let selector1 = useSelector((state)=>state.countryreducer)//read the value from the store
+
         return(
             <>
                <Header/>
  
+               <h1>{selector}</h1>
+               <h1>{selector1}</h1>
+               
 
   <section class="about_section layout_padding ">
     <div class="container">

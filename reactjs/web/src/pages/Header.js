@@ -1,11 +1,12 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate,NavLink } from "react-router-dom";
+
 
 export const Header=()=>{
     const [isMenuOpen,setIsMenuOpen] = useState(false);
     const  navigate = useNavigate();
     const openNav=()=>{
-                setIsMenuOpen(!isMenuOpen);
+            setIsMenuOpen(!isMenuOpen);
     }
     const logout=()=>{
       navigate("/login");
@@ -30,10 +31,14 @@ export const Header=()=>{
             </button>
             <div id="myNav" className={"overlay "+(isMenuOpen?' menu_width':'')}> 
               <div class="overlay-content">
-                <a href="/home">Home</a>
+                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/home2">Home2</NavLink>
+                <NavLink to="/service">Service</NavLink>
+                {/* <a href="/home">Home</a>
                 <a href="/about">About</a>
-                
-                <a href="/service">Service</a>
+                <a href="/home2">Home2</a>
+                <a href="/service">Service</a> */}
                 <a href="blog.html">Blog</a>
                 <a onClick={logout} href="#">Logout</a>
               </div>
