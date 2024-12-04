@@ -8,6 +8,7 @@ import { Login } from './pages/Login';
 import Home2 from './pages/Home2';
 import { Provider } from 'react-redux';
 import { myStore } from './config/reduxconfig';
+import Product from './pages/Product';
 
 const routerConfig = createBrowserRouter(
   [
@@ -15,7 +16,9 @@ const routerConfig = createBrowserRouter(
     {"path":'/home2','element':<Home2/>},
     {"path":'/about','element':<About/>},
     {"path":'/service','element':<Service/>},
-    {"path":'/login','element':<Login/>}
+    {"path":'/login','element':<Login/>},
+    {"path":'/product','element':<Product/>}
+    
   ]
 );
 function App() {

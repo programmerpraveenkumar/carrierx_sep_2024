@@ -5,5 +5,6 @@ class Sample{
     }
 }
 
+//object for the above class
 let s = new Sample();
-s.display();
+s.display();//calling the mtehod using object
