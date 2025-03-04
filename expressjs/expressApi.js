@@ -3,6 +3,19 @@ const express = require('express');
 
 const app = express();//create the object;
 
+app.use(express.json());//this will enable the request body
+
+const { MongoClient } = require('mongodb');
+// or as an es module:
+// import { MongoClient } from 'mongodb'
+
+// Connection URL
+const url = 'mongodb+srv://testpraveen:TOF2C1vPXQx9dEzD@cluster0.twdnbua.mongodb.net/';
+const client = new MongoClient(url);
+
+// Database Name
+const dbName = 'sample_mflix';
+
 app.get("/myname",(req,res)=>{
     let email =  req.query['email'];
     res.write("recvd value is "+email);
@@ -52,6 +65,27 @@ app.post("/register",(req,res)=>{
     res.end();//ending the response.
 })
 
+app.post("/register2",(req,res)=>{
+    //getting the  request body
+    let {email,password} = req.body;
+    console.log(email,password);
+    
+    //ending the response
+    res.end();//ending the response.
+})
+
+app.get("/getUser",async(req,res)=>{
+
+    await client.connect();
+    const db =  client.db(dbName);
+    const collection = db.collection('users');
+
+    const data = await collection.find({}).toArray();
+   // console.log(data);
+    res.json(data);
+
+})
+
 //in postman select put method and enter the url
 app.put("/myname",(req,res)=>{
     res.write("this is for put method");
@@ -63,4 +97,4 @@ app.delete("/myname",(req,res)=>{
     res.end();//ending the response.
 })
 
-app.listen(8080,()=>console.log("server is started.!!!"));
+app.listen(8081,()=>console.log("server is started.!!!"));

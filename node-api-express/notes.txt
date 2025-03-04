@@ -1,0 +1,33 @@
+http methods:
+    1.get
+            get also can be used for sending data ..but its limited.
+    2.post
+        for sending secure data (otp,password,aadharno)
+        file upload or large data can be sent by post
+    3.put
+    4.delete
+
+
+to receive the data in post method
+    requestparam or queryparams--> www.sample.com/login?name=asdf&id=45
+    requestbody
+    pathvariable
+
+to receive the data in get method
+    requestparam --> www.sample.com/login?name=asdf&id=45
+    pathvariable    
+
+
+
+    nodejs:
+    npm init --> creating the nodejs 
+
+    //for installing the nodejs
+    npm i expressjs
+    npm i mongodb
+
+    crud operation
+        create
+        read
+        update
+        delete

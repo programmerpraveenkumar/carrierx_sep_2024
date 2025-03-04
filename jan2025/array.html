@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name = ["wf",'awefew','adsasdf','cvcvvc','3ertre'];//index array
+        console.log(name[1]);
+
+        //filter the name starts with 'a'
+        let newData = name.filter((obj)=>obj.startsWith('a'))
+        console.log(newData);
+
+        //map will manipulate all the elements
+        let newData1 = name.map((ele)=> "1."+ele);
+        console.log(newData1);
+        
+
+
+
+
+        //objects
+        let detail = {"name":"sample","mobile":9878907};
+        console.log(detail['name']);
+
+        //json
+        let personDetails = [
+                {"name":"sample","mobile":9878907},
+                {"name":"sample","mobile":9878907}
+        ];
+        
+        console.log(personDetails[0]['name']);
+        
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

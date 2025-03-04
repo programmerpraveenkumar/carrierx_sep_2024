@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function restApi(){
+            //await will wait till it completes the process
+            let res = await fetch("https://www.apirequest.in/user/api/",{method:"GET"})
+            let json = await res.json();//extracting the json from the response
+            console.log(json);
+            json.forEach(element => {
+                    console.log(element['id'],element['name']);
+                    
+            });
+        }
+        async function restPostApi(){
+            let data ={
+                "email":"Lydia@apirequest.in",
+                "password":"adfdfsdfsdf"
+            }
+            let res = await fetch("https://www.apirequest.in/user/api/login",
+            {
+                "method":"POST",
+                "body":JSON.stringify(data),
+                "headers":{"content-type":"application/json"}
+            })
+            let json = await res.json();//extracting the json from the response
+            console.log(json['token']);
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="restApi()">restApi</button>
+    <button onclick="restPostApi()">restPostApi</button>
+</body>
+</html>

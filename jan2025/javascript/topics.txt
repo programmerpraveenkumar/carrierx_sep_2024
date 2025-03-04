@@ -1,0 +1,11 @@
+variable declration
+binding events
+arrays
+json
+promises
+rest api integration
+arrow functions
+dom manipulation(html,css)
+api integration
+oops
+advanced js(map,filter)
