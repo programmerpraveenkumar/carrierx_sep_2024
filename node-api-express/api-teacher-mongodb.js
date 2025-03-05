@@ -21,15 +21,17 @@ const dbName = 'school';
 app.post("/createTeachers",async(req,res)=>{
     
         //destructuring
-        let {name,email,address,mobile} = req.body;//recv the data from the request body
+        let {name,email,address,mobile,password} = req.body;//recv the data from the request body
         await client.connect();
 
         const db = client.db(dbName);//select the database
-        await db.collection("teacher").insertOne({"name":name,"email":email,"address":address,"mobile":mobile});
+        await db.collection("teacher").insertOne({"name":name,"email":email,"address":address,"password":password,"mobile":mobile});
         res.json({"message":"teacher is created!!"});
         res.end();
 })
 
+//localhost:8080/login
+//body ->{emai:"","password":""}
 app.post("/login",async(req,res)=>{
     
     //destructuring
@@ -37,7 +39,13 @@ app.post("/login",async(req,res)=>{
     await client.connect();
     const db = client.db(dbName);//select the database
     let teacher =  await db.collection("teacher").find({"email":email,"password":password}).toArray();
-    res.json(teacher);
+
+    //if records are matching 
+    if(teacher.length ==1){
+        res.json(teacher);
+    }else{
+        res.json({"message":"Your details are wrong!!"})
+    }
     res.end();
 })
 
