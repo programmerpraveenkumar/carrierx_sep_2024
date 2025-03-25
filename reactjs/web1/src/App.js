@@ -5,17 +5,12 @@ import Home from './Pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router";
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import { TeacherList } from './TeacherList';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
-  </BrowserRouter>
+    <TeacherList/>
 
   );
 }
