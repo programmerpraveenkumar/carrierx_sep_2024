@@ -4,6 +4,7 @@ var jwt = require('jsonwebtoken');
 const fileUpload = require('express-fileupload');
 const path = require('path');
 const app = express();
+var birds = require("./api-teacher-2")
 app.use(fileUpload({
     limits: { fileSize: 50 * 1024 * 1024 },
     
@@ -13,6 +14,9 @@ app.use(express.json());///configure for request body
 
 const cors = require("cors");
 app.use(cors())
+
+//localhost:8080/birds -> all requests will be navigate to below url
+app.use("/birds",birds)
 //gateway
 // app.use((req,res)=>{
 //     console.log(req.originalUrl);
@@ -76,7 +80,6 @@ app.post("/updatePic",async(req,res)=>{
     res.end();
 })
 app.get("/getPic",async(req,res)=>{
-    
     //destructuring
     // let {id} = req.body;//recv the data from the request body
     await client.connect();

@@ -1,0 +1,7 @@
+create react app with one form
+   npx create-next-app@latest
+   
+Create api in  node with express 
+By submit the form store the data in the moongob
+
+
